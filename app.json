@@ -2,6 +2,7 @@
   "expo": {
     "name": "SimpleApp",
     "slug": "SimpleApp",
+    "scheme": "SimpleApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,10 +20,22 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.arianapalle.SimpleApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "810f24e9-783b-4929-94cc-ffca247bac7a"
+      }
     }
   }
 }
