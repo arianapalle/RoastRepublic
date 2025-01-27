@@ -1,6 +1,6 @@
-import { router } from "expo-router";
 import React from "react";
 import { StyleSheet, View, Text, SafeAreaView, TextInput, Image, TouchableOpacity, Pressable, ScrollView } from "react-native";
+import { Link } from "expo-router";
 
 const BrowseScreen = () => {
     return(
@@ -15,7 +15,7 @@ const BrowseScreen = () => {
             </View>
 
             <View style={styles.menuBackground}>
-                <Image source={require('../../../assets/Logo(NoBG).png')} 
+                <Image source={require('../../../../assets/Logo(NoBG).png')} 
                     style={{ width: 90, 
                              height: 30, 
                              marginHorizontal: 20, 
@@ -24,8 +24,10 @@ const BrowseScreen = () => {
 
                 <Text style={styles.Categories}>COFFEE BASED</Text>
                 <View style={styles.menuBg}>
-                <TouchableOpacity onPress={() => router.push({pathname: "/(pages)/OrderForm"})} style={styles.menuContainer}> 
-                <Image source={require('../../../assets/SpanishCoffee.jpg')} 
+
+                <Link href='/dashboard/(tabs)/BroweScreen/Americano' asChild> 
+                <TouchableOpacity style={styles.menuContainer}> 
+                <Image source={require('../../../../assets/Americano.jpg')} 
                          style={{ width: 173, 
                             height: 100,
                             borderTopLeftRadius: 20,
@@ -34,15 +36,16 @@ const BrowseScreen = () => {
 
                         <Text style={styles.itemName}>Americano</Text>
                         <View style={styles.menuBottomSec}>
-                            <Text style={styles.itemPrice}>₱ 160.00</Text>
+                            <Text style={styles.itemPrice}>₱ 145.00</Text>
                             <Pressable style={styles.addItem}>
                                 <Text style={styles.PlusText}> + </Text>
                                 </Pressable>
                         </View>
                     </TouchableOpacity >
+                    </Link>   
 
                     <TouchableOpacity  style={styles.menuContainer}>
-                    <Image source={require('../../../assets/SpanishCoffee.jpg')} 
+                    <Image source={require('../../../../assets/SpanishCoffee.jpg')} 
                          style={{ width: 173, 
                             height: 100,
                             borderTopLeftRadius: 20,
@@ -59,7 +62,7 @@ const BrowseScreen = () => {
                     </TouchableOpacity >
 
                     <TouchableOpacity  style={styles.menuContainer}>
-                    <Image source={require('../../../assets/SpanishCoffee.jpg')} 
+                    <Image source={require('../../../../assets/SpanishCoffee.jpg')} 
                         style={{ width: 173, 
                             height: 100,
                             borderTopLeftRadius: 20,
@@ -76,7 +79,7 @@ const BrowseScreen = () => {
                     </TouchableOpacity >
 
                     <TouchableOpacity  style={styles.menuContainer}>
-                    <Image source={require('../../../assets/SpanishCoffee.jpg')} 
+                    <Image source={require('../../../../assets/SpanishCoffee.jpg')} 
                          style={{ width: 173, 
                             height: 100,
                             borderTopLeftRadius: 20,
@@ -93,7 +96,7 @@ const BrowseScreen = () => {
                     </TouchableOpacity >
 
                     <TouchableOpacity  style={styles.menuContainer}>
-                    <Image source={require('../../../assets/SpanishCoffee.jpg')} 
+                    <Image source={require('../../../../assets/SpanishCoffee.jpg')} 
                          style={{ width: 173, 
                             height: 100,
                             borderTopLeftRadius: 20,
@@ -110,7 +113,7 @@ const BrowseScreen = () => {
                     </TouchableOpacity >
 
                     <TouchableOpacity  style={styles.menuContainer}>
-                    <Image source={require('../../../assets/SpanishCoffee.jpg')} 
+                    <Image source={require('../../../../assets/SpanishCoffee.jpg')} 
                          style={{ width: 173, 
                             height: 100,
                             borderTopLeftRadius: 20,
@@ -194,6 +197,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
     menuContainer: {
+        width: 173, 
         backgroundColor: "#FFF8EA",
         borderRadius: 20,
         shadowColor: "#000",

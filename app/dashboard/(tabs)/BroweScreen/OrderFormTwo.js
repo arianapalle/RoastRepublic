@@ -1,7 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import { View, Text, Image, StyleSheet } from "react-native";
 
-const OrderForm = () => {
+const OrderFormTwo = () => {
   const { name, price, image } = useLocalSearchParams();
 
   return (
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default OrderForm;
+export default OrderFormTwo;

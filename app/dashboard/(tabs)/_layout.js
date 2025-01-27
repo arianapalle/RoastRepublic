@@ -7,7 +7,7 @@ const TabsLayout = () => {
   return (
     <Tabs screenOptions={{ tabBarStyle: styles.BottomBar, tabBarShowLabel: false,}}>
       
-      <Tabs.Screen name="BrowseScreen" 
+      <Tabs.Screen name="BroweScreen" 
       options={{
         headerShown:false,
         tabBarIcon: () => (
